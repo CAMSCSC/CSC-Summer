@@ -1,0 +1,152 @@
+@import "materialize";
+@import "terminal";
+
+html {
+	background-color: #fcfcfc;
+	color: rgba(0, 0, 0, 0.9);
+}
+
+/* Accent Colors */
+
+b {
+	color: color("orange", "accent-3");
+}
+
+a {
+	color: color("orange", "accent-3");
+}
+
+/* True Flex Layout */
+
+.row.true-flex {
+	display: flex;
+	flex-wrap: wrap;
+	
+	&.center-flex {
+		justify-content: center;
+	}
+	
+	.equalize {
+		display: flex;
+		
+		* {
+			flex: 1 1 auto;
+		}
+	}
+	
+	&.equalizer {
+		display: flex;
+		flex-wrap: wrap;
+		
+		.col {
+			display: flex;
+		}
+		
+		.col > * {
+			flex: 1 1 auto;
+		}
+	}
+}
+
+/* Helpers */
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.card-panel > .valign * {
+	display: block;
+}
+
+.card-panel > * {
+	display: block;
+}
+
+/* Preload */
+
+.preload * {
+	transition: none !important;
+}
+
+/* Footer */
+ 
+footer a {
+	transition: color 0.5s ease-in-out;
+	color: #000;
+		
+	&:hover {
+		color: color("light-green", "accent-3");
+	}
+}
+
+/* Cards */
+
+.card, {
+	background-color: color("blue-grey", "darken-4");
+	
+	.card-reveal {
+		background-color: color("blue-grey", "darken-4");
+	}
+}
+
+.card {
+	color: #000
+}
+
+/* Table of Contents */
+
+.table-of-contents {
+	position: fixed;
+	right: 0;
+	font-size: 1.64rem;
+	line-height: 1.64rem;
+	padding-right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	.row {
+		margin-bottom: 0px;
+	}
+
+	.infrastructure {
+		&.active {
+			color: color("yellow", "accent-3");
+		}
+	}
+	.social {
+		&.active {
+			color: color("light-blue", "accent-3");
+		}
+	}
+	.medical {
+		&.active {
+			color: color("red", "accent-3");
+		}
+	}
+	.survival {
+		&.active {
+			color: color("green", "accent-3");
+		}
+	}
+}
+
+body {
+	display: flex;
+	// min-height: 100vh;
+	height: 100vh; /* This is the last draw IE. */
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+footer {
+	padding-top: 20px;
+	flex: 0 0 auto;
+	overflow: hidden; /* Hey IE, I know how to NOT follow standards as well. */
+}
+
+main {
+	flex: 1 0 auto;
+	position: relative;
+	min-height: 2px; /* WHY IE. WHY. */
+	// overflow: hidden; /* Again IE? When will you stop? */
+}

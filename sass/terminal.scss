@@ -1,12 +1,5 @@
-/*
- * This css file is part of jquery terminal
- *
- * Licensed under GNU LGPL Version 3 license
- * Copyright (c) 2011-2013 Jakub Jankiewicz <http://jcubic.pl>
- *
- */
 .terminal .terminal-output .format, .cmd .format,
-.cmd .prompt, .cmd .prompt div, .terminal .terminal-output div div{
+.cmd .prompt, .cmd .prompt div, .terminal .terminal-output div div {
     display: inline-block;
 }
 .cmd .clipboard {
@@ -28,24 +21,10 @@
 	visibility: hidden;
 }
 
-html {
-	font-size: 17px;
-	background-color: black;
-}
-
-body {
-	transform-style: preserve-3d;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	margin: 0;
-}
-
 .terminal-wrapper {
-	flex: 0 0 auto;
-	height: 100%;
+	height: 500px;
+	font-size: 17px;
+	font-family: FreeMono, monospace;
 	width: 100%;
 	background-color: black;
 	overflow-y: scroll;
@@ -118,10 +97,10 @@ body {
     float: left;
 }
 .terminal, .cmd {
-    font-family: FreeMono, monospace;
+    font-family: "Courier New", Courier, monospace;
     color: #c0c0c0;
+	font-size: 14px;
     background-color: #000;
-    font-size: 1rem;
     line-height: 1.3rem;
 }
 .terminal-output > div {
@@ -132,7 +111,6 @@ body {
 .terminal .terminal-output div span {
     display: inline-block;
 }
-*/
 
 .cmd span {
     float: left;
