@@ -90,52 +90,16 @@ footer a {
 }
 
 .card {
-	color: #000
+	color: #000;
 }
 
 /* Table of Contents */
-
-.table-of-contents {
-	position: fixed;
-	right: 0;
-	font-size: 1.64rem;
-	line-height: 1.64rem;
-	padding-right: 20px;
-	top: 50%;
-	transform: translateY(-50%);
-
-	.row {
-		margin-bottom: 0px;
-	}
-
-	.infrastructure {
-		&.active {
-			color: color("yellow", "accent-3");
-		}
-	}
-	.social {
-		&.active {
-			color: color("light-blue", "accent-3");
-		}
-	}
-	.medical {
-		&.active {
-			color: color("red", "accent-3");
-		}
-	}
-	.survival {
-		&.active {
-			color: color("green", "accent-3");
-		}
-	}
-}
 
 body {
 	display: flex;
 	// min-height: 100vh;
 	height: 100vh; /* This is the last draw IE. */
 	flex-direction: column;
-	overflow-y: scroll;
 }
 
 footer {

@@ -2408,7 +2408,7 @@
         var span = temp.find('span');
 		var tempheight = span.height();
 		var result = 0;
-        while (span.height() === tempheight) {
+        while (span.height() === tempheight && result < 500) {
 			result += 1;
 			span.append('0');
 		}
