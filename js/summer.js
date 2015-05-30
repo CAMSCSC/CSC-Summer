@@ -1,26 +1,26 @@
 var challenges = [
-	'Challenge 1',
-	'Challenge 2',
-	'Challenge 3',
-	'Challenge 4',
+	'The following transmission was intercepted.\n[[;#0f0;]Jrypbzr gb gur svefg punyyratr. {ebg_va_guvegrra}.]', // {rot_in_thirteen}
+	'A secrect flag was embedded in the [[;#0f0;]html source code] of this page.', // {all_in_the_c0de}
+	'The JavaScript function [[;#0f0;]give_flag()] returns the flag to this challenge.\nInvoke this function on this page.', // {runn1ng_functionz}
+	'Hidden within the cookies of this page is a flag.', // {co0o0o0o0o0kies!}
 	'Challenge 5',
 	'Challenge 6',
 ];
 
 var solutions = [
-	'1',
-	'2',
-	'3',
-	'4',
+	'97360644574220383287d2c2d7e263fcabd8032e',
+	'e7040905ac000478c1281f334153f66dbcf6d9c2',
+	'8ff512db2864b9e651d1be7b10c7cc3e53a8caad',
+	'7522c3f9d2157e8b4124962d1387155751b6fca6',
 	'5',
 	'6',
 ];
 
 var info = {
-	about: "[[u;;]General Information]\n\nThe CSC Cyber Security Camp is a summer enrichment program run by the computer science team at the California Academy of Mathematics and Science (CAMS). The program aims to teach middle school students interested in the fields of Electrical Engineering, Cyber Security, or Computer Science about advanced and fascinating topics that are usually never covered in computer science classes. Topics in this session include: Programming, Forensics, Exploitation (Web & Binary), Cryptography, and Reconnaissance. After comprehensive lessons, we will allow the students to demonstrate their skills in challenges that we have set up. On the last day of the camp, students will compete in a full length Capture the Flag (CTF) hacking competition using the skills they've learned with prizes awarded to top placing teams.",
-	qualifications: "[[u;;]Our Qualifications]\n\nThe CAMS Computer Science Club (CSC) is a relatively new club at the school. However, we have already had many impressive accomplishments by our members. In 2013, our team placed first in the 10th annual national High School Forensics competition at NYU Polytechnic Institute. In 2014, we returned as a national level qualifying team. This year, we ran CAMS CTF, an international computer science and hacking competition that attracted over 2000 students from around the world",
+	about: "[[u;;]General Information]\n\nThe CAMS Computer Science Enrichment (CCSE) is a summer enrichment program run by the computer science team at the California Academy of Mathematics and Science (CAMS). The program aims to teach middle school students interested in the fields of Electrical Engineering, Cyber Security, or Computer Science about advanced and fascinating topics that are usually never covered in computer science classes. Topics in this session include: Programming, Forensics, Exploitation (Web & Binary), and Cryptography. After comprehensive lessons, we will allow the students to demonstrate their skills in challenges that we have set up. On the last day of the camp, students will compete in a full length Capture the Flag (CTF) hacking competition using the skills they've learned with prizes awarded to top placing teams.",
+	qualifications: "[[u;;]Our Qualifications]\n\nThe CAMS Computer Science Club (CSC) is a relatively new club at the school. However, we have already had many impressive accomplishments by our members. In 2013, our team placed first in the 10th annual national High School Forensics competition at NYU Polytechnic Institute. In 2014, we returned as a national level qualifying team. This year, we ran CAMS CTF, an international computer science and hacking competition that attracted over 2000 students from around the world.",
 	date: "[[u;;]Date and Time]\n\nThis summer session will run from 7/7/2015 to 7/10/2015 daily from 9:00 A.M. to 3:00 P.M. Did we mention that lunch is provided on Friday? Yup.",
-	location: "[[u;;]Location]\n\nAll of this exciting fun will take place at the California Academy of Mathematics and Science.\n\n1000 East Victoria Street\nCarson, CA 90747\nRoom 6010\n\nThe cool part is, we are located inside of the CSUDH campus! We'll be at the front to meet everyone the first day. If you get lost, call us at 626-322-6929 and we will guide you to our location. Google Maps will guide you as well.",
+	location: "[[u;;]Location]\n\nAll of this exciting fun will take place at the California Academy of Mathematics and Science.\n\n1000 East Victoria Street\nCarson, CA 90747\nRoom 3009\n\nThe cool part is, we are located inside of the CSUDH campus! We'll be at the front to meet everyone the first day. If you get lost, call us and we will guide you to our location. Google Maps can help as well.",
 	reqs: "[[u;;]Prerequisites]\n\nYou do not need ANY prior knowledge in computer science to participate. We will teach you everything! A personal laptop is preferable but school computers will be available for use as well",
 	contact: "[[u;;]Contact Us]\n\nMore questions? We'd love to answer them. Email us!",
 };
@@ -83,7 +83,7 @@ var commands = {
 				fill_line(term);
 			} else if (args.length > 0 && info.hasOwnProperty(args[0])) {
 				fill_line(term);
-				term.echo('\n' + info[section] + '\n');
+				term.echo('\n' + info[args[0]] + '\n');
 				fill_line(term);
 			} else {
 				term.error('Invalid or missing argument. Use "help info" to get usage help.');
@@ -143,7 +143,7 @@ function create_terminal() {
 		
 		$('.terminal-wrapper').scrollTop($('.terminal-wrapper').prop("scrollHeight"));
 	}, {
-		greetings: 	'[[bg;#0f0;]Welcome to (CSC)^2 Shell]\n' +
+		greetings: 	'[[bg;#0f0;]Welcome to CCSE Shell]\n' +
 					'Type "help" to see a list of available commands or "info" to get information about this program.\n' +
 					'',
 		name: 'CSC-Summer',
@@ -152,9 +152,11 @@ function create_terminal() {
 		onBlur: function() { return false; },
 		onInit: function(term) { term.resize(); },
 		keydown: function() { $('.terminal-wrapper').scrollTop($('.terminal-wrapper').prop("scrollHeight")); },
-		prompt: '[[;#0f0;]user@CSC:~$] '});
+		prompt: '[[;#0f0;]user@ccse:~$] '});
 }
 
 $(document).ready(function() {
 	create_terminal();
 });
+
+eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('9 6=["\\e\\n\\b\\4\\4\\o\\4\\f\\m\\c\\b\\4\\8\\l\\7\\3\\4\\k\\h","\\8\\3\\3\\g\\7\\d","\\c\\p\\q\\f\\w\\e\\8\\3\\5\\3\\5\\3\\5\\3\\5\\3\\5\\g\\7\\d\\t\\s\\h"];9 i=[6[0]];r u(){v i[0]}9 a=[6[1],6[2]];j[a[0]]=a[1];',33,33,'|||x6F|x6E|x30|_0xd296|x69|x63|var|_0xcd8d|x75|x66|x65|x7B|x67|x6B|x7D|_0x9e1b|document|x7A|x74|x5F|x72|x31|x6C|x61|function|x21|x73|give_flag|return|x3D'.split('|'),0,{}))
