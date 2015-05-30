@@ -3,7 +3,7 @@ var challenges = [
 	'A secrect flag was embedded in the [[;#0f0;]html source code] of this page.', // {all_in_the_c0de}
 	'The JavaScript function [[;#0f0;]give_flag()] returns the flag to this challenge.\nInvoke this function on this page.', // {runn1ng_functionz}
 	'Hidden within the cookies of this page is a flag.', // {co0o0o0o0o0kies!}
-	'Challenge 5',
+	'There is a flag hidden in the binary content of our flyer.', // {a_flag_at_thee_end}
 	'Challenge 6',
 ];
 
@@ -12,7 +12,7 @@ var solutions = [
 	'e7040905ac000478c1281f334153f66dbcf6d9c2',
 	'8ff512db2864b9e651d1be7b10c7cc3e53a8caad',
 	'7522c3f9d2157e8b4124962d1387155751b6fca6',
-	'5',
+	'bb65b007354e2100b6b983184f61eb4e92e7fbb4',
 	'6',
 ];
 
