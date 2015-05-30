@@ -4,7 +4,6 @@ var challenges = [
 	'The JavaScript function [[;#0f0;]give_flag()] returns the flag to this challenge.\nInvoke this function on this page.', // {runn1ng_functionz}
 	'Hidden within the cookies of this page is a flag.', // {co0o0o0o0o0kies!}
 	'There is a flag hidden in the binary content of our flyer.', // {a_flag_at_thee_end}
-	'Challenge 6',
 ];
 
 var solutions = [
@@ -13,7 +12,6 @@ var solutions = [
 	'8ff512db2864b9e651d1be7b10c7cc3e53a8caad',
 	'7522c3f9d2157e8b4124962d1387155751b6fca6',
 	'bb65b007354e2100b6b983184f61eb4e92e7fbb4',
-	'6',
 ];
 
 var info = {
@@ -40,7 +38,7 @@ var commands = {
 	},
 	sample: {
 		help: 'A collection of sample problems to try.',
-		usage: 'The function accepts the required argument [entity] where [entity] is an integer from 1-6.\nUse [[b;;]sample &#91;entity&#93;] to get a sample challenge.\nExample: sample 1',
+		usage: 'The function accepts the required argument [entity] where [entity] is an integer from 1-5.\nUse [[b;;]sample &#91;entity&#93;] to get a sample challenge.\nExample: sample 1',
 		run: function(term, args) {
 			chal = parseInt(args[0]) - 1;
 			if (chal >= 0 && challenges.length >= chal) {
